@@ -1,7 +1,6 @@
 package com.example.ahasan.movieApp.MainScreen.Model
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.MutableLiveData
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +14,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.ahasan.movieApp.R
 import com.example.ahasan.movieApp.DetailsScreen.View.DetailsActivity
-import com.example.ahasan.movieApp.DI.annotations.ActivityContext
+import com.example.ahasan.movieApp.DI.Annotations.ActivityContext
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
 
@@ -34,7 +33,6 @@ class MovieAdapter @Inject constructor(@ActivityContext val context: Context) :
         return movieViewHolder(view)
     }
 
-    @SuppressLint("WrongConstant")
     override fun onBindViewHolder(movieViewHolder: movieViewHolder, position: Int) {
         val mPosition = movieDetails.get(position)
         Picasso.get().load(firstURLPart + mPosition?.posterPath)

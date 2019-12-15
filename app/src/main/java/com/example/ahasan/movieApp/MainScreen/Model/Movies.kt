@@ -2,7 +2,7 @@ package com.example.ahasan.movieApp.MainScreen.Model
 
 import com.google.gson.annotations.SerializedName
 
-data class Movies(
+data class  Movies(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")

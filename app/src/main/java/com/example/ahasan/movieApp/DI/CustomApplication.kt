@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.app.Service
 import android.content.Context
-import com.example.ahasan.movieApp.DI.components.DaggerApplicationComponent
+import com.example.ahasan.movieApp.DI.Components.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

@@ -1,16 +1,16 @@
-package com.example.ahasan.movieApp.DI.modules
+package com.example.ahasan.movieApp.DI.Modules
 
 import android.content.Context
 import android.support.v7.widget.GridLayoutManager
-import com.example.ahasan.movieApp.DI.DetailsViewModelModule
+import com.example.ahasan.movieApp.DI.ViewModelFactory.DetailsViewModelModule
 import com.example.ahasan.movieApp.Interfaces.ApiInterface
 import com.example.ahasan.movieApp.Interfaces.TopRatedAPI
 import com.example.ahasan.movieApp.MainScreen.ViewModel.MovieViewModel
 import com.example.ahasan.movieApp.MainScreen.View.MovieView
-import com.example.ahasan.movieApp.DI.ViewModelModule
+import com.example.ahasan.movieApp.DI.ViewModelFactory.ViewModelModule
 import com.example.ahasan.movieApp.MainScreen.View.MainActivity
-import com.example.ahasan.movieApp.DI.annotations.ActivityContext
-import com.example.ahasan.movieApp.DI.annotations.RetrofitMovie
+import com.example.ahasan.movieApp.DI.Annotations.ActivityContext
+import com.example.ahasan.movieApp.DI.Annotations.RetrofitMovie
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector

@@ -1,4 +1,4 @@
-package com.example.ahasan.movieApp.DI
+package com.example.ahasan.movieApp.DI.ViewModelFactory
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

@@ -5,7 +5,6 @@ import com.example.ahasan.movieApp.DetailsScreen.Model.GenreModel
 import com.example.ahasan.movieApp.Interfaces.MovieDetailsAPI
 import com.example.ahasan.movieApp.DetailsScreen.Model.DetailsModel
 import com.example.ahasan.movieApp.DetailsScreen.View.DetailsView
-import com.example.ahasan.movieApp.R
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -13,7 +12,6 @@ import javax.inject.Inject
 
 class DetailsViewModel @Inject constructor(
     private val movieDetailsAPI: MovieDetailsAPI): ViewModel() {
-
     lateinit var detailsView: DetailsView
     var disposable = CompositeDisposable();
 
@@ -22,7 +20,12 @@ class DetailsViewModel @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe({ t: DetailsModel? -> detailsView.setResult(t!!)
-            })
+            }
+            )
         )
+    }
+    override fun onCleared() {
+        super.onCleared()
+        disposable.clear()
     }
 }

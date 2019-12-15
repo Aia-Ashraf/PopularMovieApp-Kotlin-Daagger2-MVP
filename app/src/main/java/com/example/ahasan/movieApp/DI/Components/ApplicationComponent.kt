@@ -1,14 +1,14 @@
-package com.example.ahasan.movieApp.DI.components
+package com.example.ahasan.movieApp.DI.Components
 
 import android.app.Application
 import android.content.Context
 import com.example.ahasan.movieApp.DI.CustomApplication
-import com.example.ahasan.movieApp.DI.DetailsViewModelModule
-import com.example.ahasan.movieApp.DI.ViewModelModule
-import com.example.ahasan.movieApp.DI.modules.*
-import com.example.ahasan.movieApp.DI.modules.ActivityModule
-import com.example.ahasan.movieApp.DI.modules.DetailsActivityModule
-import com.example.ahasan.movieApp.DI.annotations.ApplicationContext
+import com.example.ahasan.movieApp.DI.ViewModelFactory.DetailsViewModelModule
+import com.example.ahasan.movieApp.DI.ViewModelFactory.ViewModelModule
+import com.example.ahasan.movieApp.DI.Modules.*
+import com.example.ahasan.movieApp.DI.Modules.ActivityModule
+import com.example.ahasan.movieApp.DI.Modules.DetailsActivityModule
+import com.example.ahasan.movieApp.DI.Annotations.ApplicationContext
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

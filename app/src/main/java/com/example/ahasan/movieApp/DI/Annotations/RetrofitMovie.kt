@@ -1,10 +1,9 @@
-package com.example.ahasan.movieApp.DI.annotations
+package com.example.ahasan.movieApp.DI.Annotations
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy
 import javax.inject.Qualifier
 
-
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-annotation class ActivityContext
+annotation class RetrofitMovie

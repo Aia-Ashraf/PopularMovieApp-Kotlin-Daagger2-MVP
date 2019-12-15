@@ -1,15 +1,19 @@
 package com.example.ahasan.movieApp.MainScreen.View
 
+import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import com.example.ahasan.movieApp.MainScreen.ViewModel.MovieViewModel
 import com.example.ahasan.movieApp.R
 import com.example.ahasan.movieApp.MainScreen.Model.MovieAdapter
 import com.example.ahasan.movieApp.MainScreen.Model.MovieList
+import com.example.ahasan.movieApp.MainScreen.Model.Movies
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -17,7 +21,6 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity(), MovieView {
 
     private lateinit var recyclerView: RecyclerView
-
     @Inject
     lateinit var movieAdapter: MovieAdapter
     @Inject
@@ -37,11 +40,9 @@ class MainActivity : AppCompatActivity(), MovieView {
         vm.movieView = this
         recyclerView.adapter = movieAdapter
 
-
     }
 
     override fun setResult(retrofitList: List<MovieList>) {
         movieAdapter.setMovieList(retrofitList)
-
     }
 }

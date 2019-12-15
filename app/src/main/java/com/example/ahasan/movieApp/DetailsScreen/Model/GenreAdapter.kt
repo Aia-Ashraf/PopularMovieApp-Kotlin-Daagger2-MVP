@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.ahasan.movieApp.R
-import com.example.ahasan.movieApp.DI.annotations.ActivityContext
+import com.example.ahasan.movieApp.DI.Annotations.ActivityContext
 import javax.inject.Inject
 
 class GenreAdapter @Inject constructor(@ActivityContext val context: Context) :

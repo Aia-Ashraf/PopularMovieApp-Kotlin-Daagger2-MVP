@@ -1,11 +1,11 @@
-package com.example.ahasan.movieApp.DI.modules
+package com.example.ahasan.movieApp.DI.Modules
 
 import android.content.Context
-import com.example.ahasan.movieApp.DI.DetailsViewModelModule
+import com.example.ahasan.movieApp.DI.ViewModelFactory.DetailsViewModelModule
 import com.example.ahasan.movieApp.Interfaces.MovieDetailsAPI
 import com.example.ahasan.movieApp.DetailsScreen.View.DetailsActivity
-import com.example.ahasan.movieApp.DI.annotations.ActivityContext
-import com.example.ahasan.movieApp.DI.annotations.RetrofitMovie
+import com.example.ahasan.movieApp.DI.Annotations.ActivityContext
+import com.example.ahasan.movieApp.DI.Annotations.RetrofitMovie
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector

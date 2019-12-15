@@ -1,6 +1,6 @@
-package com.example.ahasan.movieApp.DI.modules
+package com.example.ahasan.movieApp.DI.Modules
 
-import com.example.ahasan.movieApp.DI.annotations.RetrofitMovie
+import com.example.ahasan.movieApp.DI.Annotations.RetrofitMovie
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

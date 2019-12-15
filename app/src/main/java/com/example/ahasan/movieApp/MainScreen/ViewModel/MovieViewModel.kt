@@ -1,6 +1,8 @@
 package com.example.ahasan.movieApp.MainScreen.ViewModel
 
+import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import android.content.Context
 import com.example.ahasan.movieApp.Interfaces.TopRatedAPI
 import com.example.ahasan.movieApp.MainScreen.Model.MovieList
 import com.example.ahasan.movieApp.MainScreen.Model.Movies
@@ -15,19 +17,23 @@ class MovieViewModel @Inject constructor(
 ): ViewModel() {
 
     var retrofitList: List<MovieList>? = ArrayList()
+    var moviesModel: MutableLiveData<Movies>? = MutableLiveData()
+
     var disposable = CompositeDisposable();
         lateinit var movieView: MovieView
 
-
-
     fun getRetrofitTopRelated() {
-
         disposable?.add(topRatedAPI.getTopRated("11af5a2e9dda5914db6389d51f4a1e9f")
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe({ t: Movies? ->
+            .subscribe({ t: Movies? ->moviesModel?.value=t
                 retrofitList = t?.movieList; movieView.setResult(retrofitList!!)
             })
         )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.clear()
     }
 }

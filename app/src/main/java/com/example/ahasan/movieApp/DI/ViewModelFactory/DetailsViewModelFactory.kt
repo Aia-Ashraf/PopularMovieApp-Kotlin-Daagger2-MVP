@@ -1,4 +1,4 @@
-package com.example.ahasan.movieApp.DI
+package com.example.ahasan.movieApp.DI.ViewModelFactory
 
 
 

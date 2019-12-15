@@ -1,9 +1,9 @@
-package com.example.ahasan.movieApp.DI.modules
+package com.example.ahasan.movieApp.DI.Modules
 
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.ahasan.movieApp.DI.annotations.ApplicationContext
+import com.example.ahasan.movieApp.DI.Annotations.ApplicationContext
 import dagger.Module
 import dagger.Provides
 
