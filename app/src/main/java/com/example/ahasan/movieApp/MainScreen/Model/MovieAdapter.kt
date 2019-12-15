@@ -38,9 +38,7 @@ class MovieAdapter @Inject constructor(@ActivityContext val context: Context) :
         Picasso.get().load(firstURLPart + mPosition?.posterPath)
             .resize(700, 700)
             .placeholder(R.drawable.abc_item_background_holo_dark)
-//            .centerCrop()
             .into(movieViewHolder.img)
-        Log.e("MovieAdapterDebug", firstURLPart + mPosition?.posterPath)
         movieViewHolder.img.setOnClickListener {
             val intent = Intent(context, DetailsActivity::class.java)
             intent.putExtra("id", mPosition.id)
@@ -48,7 +46,7 @@ class MovieAdapter @Inject constructor(@ActivityContext val context: Context) :
 
         }
         movieViewHolder.movieTitle.setText(mPosition.title)
-        movieViewHolder.movieGenres.setText(mPosition.originalLanguage)
+//        movieViewHolder.movieGenres.setText(mPosition.originalLanguage)
     }
 
     fun setMovieList(list: List<MovieList>) {
