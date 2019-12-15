@@ -7,6 +7,7 @@ App includes two screens :
 -Main Screen (Feach list of movies display  :-
       -Name  
       -poster)
+      
 -Deatails Screen (Details of movie display :-
       - Movie Poster 
 			- Movie average vote  
